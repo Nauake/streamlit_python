@@ -38,6 +38,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 dados = pd.read_excel("Classificacao_teste.xlsx")
 dados_filtrados = dados[["NOME", "TIRO PISTOLA", "AA PATRULHA II", "AA TAF", "AA TEC MIL I",
                          "MÉDIA DO BÁSICO", "MÉDIA_PARCIAL"]]
@@ -49,7 +50,7 @@ nomes.insert(0, "Todos os nomes")
 
 st.header("Notas do Curso de Infantaria")
 
-selec_box = st.sidebar.selectbox(
+selec_box = st.selectbox(
     "Escolha seu nome:",
     nomes
 )
